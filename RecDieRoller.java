@@ -1,25 +1,36 @@
 import java.util.Random;
 
+/**
+ * `RecDieRoller` class represents a die rolling simulator.
+ * @author lhamilton2
+ */
+
 class RecDieRoller 
 {
-    private Random random = new Random();
+    private Random r = new Random();
 
-    public int rollUntilTwo() 
+    /**
+     * Simulates rolling a die until a 2 is rolled and returns the number of rolls required.
+     *
+     * @return The number of rolls required to roll a 2.
+     */
+    public int rollUntilTwo()
     {
         int rolls = 0;
 
         while (true) 
         {
-            int rollResult = random.nextInt(6) + 1; // Simulate a roll of a 6-sided die
+            int rollResult = r.nextInt(6) + 1; // Simulate a roll of a 6-sided die
             rolls++;
 
-            if (rollResult == 2)
+            if (rollResult == 2) 
             {
                 return rolls;
             }
         }
     }
-}//end class
+} // end class
+
 
 
 /**Code prior to update
